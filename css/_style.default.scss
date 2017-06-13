@@ -175,30 +175,65 @@ p.social a.email {
   }
 }
 #page1 {
-  text-align: center;
-  background: url('../img/macbook-juice.jpg') center center no-repeat;
+  background: url('../img/mallorca.jpg') center center no-repeat;
   background-size: cover;
   color: #fff;
-}
-#page1 h1,
-#page1 h2,
-#page1 h3 {
-  color: #fff;
-}
-#page1 p {
-  font-size: 20px;
-}
-#page1 .icon {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  margin-left: -20px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border: solid 2px #fff;
-  border-radius: 20px;
-  z-index: 3;
+
+  h1,
+  h2,
+  h3 {
+    color: #fff;
+  }
+
+  h1 {
+    text-transform: lowercase;
+    @include media-breakpoint-down(xs) {
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+  p {
+    font-size: 20px;
+  }
+
+  .subheadline {
+    @include media-breakpoint-down(xs) {
+      text-align: center;
+    }
+  }
+
+  .headline {
+    @include media-breakpoint-down(xs) {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: solid 2px #fff;
+    border-radius: 20px;
+    z-index: 3;
+  }
+
+  .mirror {
+    display: block;
+    transform: scaleX(-1);
+    @include media-breakpoint-down(xs) {
+      direction: rtl;
+      margin-left: 1.7em;
+    }
+  }
+  .thin {
+    font-weight: 300;
+  }
 }
 body.disabled-onepage-scroll .onepage-wrapper section {
   min-height: 100%;
