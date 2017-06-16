@@ -1,0 +1,21 @@
+{
+  "name": "phpuceu",
+  "description": "PHPucEU 2017",
+  "main": "index.html",
+  "authors": [
+    "Sascha Wohlgemuth <mail@sascha-wohlgemuth.de>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}

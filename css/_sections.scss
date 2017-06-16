@@ -1,0 +1,38 @@
+.section2-mood {
+  @include media-breakpoint-up(md) {
+    margin-top: 9em;
+  }
+}
+
+.sectionDefinition {
+  &__secondary-content {
+    @include media-breakpoint-up(md) {
+      column-count: 2;
+      column-gap: 3em;
+    }
+  }
+}
+.sectionDefinition-mood {
+  > img {
+    @media (max-height: 768px) {
+      max-width: 250px;
+    }
+  }
+}
+
+.section3 {
+  .heading {
+    white-space: nowrap;
+  }
+  h3.heading {
+    @include media-breakpoint-down(lg) {
+      font-size: 15px;
+    }
+  }
+
+  &__second-row {
+    @include media-breakpoint-up(md) {
+      margin-top: 3em;
+    }
+  }
+}
