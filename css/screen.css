@@ -1102,7 +1102,7 @@ a.list-group-item.active > .badge,
   overflow: hidden;
   width: 100%;
   height: auto;
-  background: red; }
+  background: #F9F9F9; }
   .gmaps-iframe iframe {
     position: absolute;
     top: 0;
