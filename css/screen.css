@@ -253,52 +253,52 @@ p.social a.email {
   .copyright {
     text-align: center !important; } }
 
-#page1 {
+#start {
   background: url("../img/mallorca.jpg") center center no-repeat;
   background-size: cover;
   color: #fff; }
-  #page1 h1,
-  #page1 h2,
-  #page1 h3 {
+  #start h1,
+  #start h2,
+  #start h3 {
     color: #fff; }
-  #page1 h1 {
+  #start h1 {
     position: relative;
     text-transform: lowercase; }
     @media (max-width: 767px) {
-      #page1 h1 {
+      #start h1 {
         font-size: 7vw; } }
     @media (min-width: 375px) {
-      #page1 h1 {
+      #start h1 {
         padding-left: 3em; } }
     @media (max-width: 374px) {
-      #page1 h1 {
+      #start h1 {
         text-align: center; } }
-    #page1 h1:before {
+    #start h1:before {
       content: url(../img/logo.svg); }
       @media (min-width: 375px) {
-        #page1 h1:before {
+        #start h1:before {
           position: absolute;
           top: .7em;
           left: 0;
           width: 3.3em; } }
       @media (max-width: 374px) {
-        #page1 h1:before {
+        #start h1:before {
           display: block;
           width: 50%;
           margin: 0 auto; } }
-  #page1 p {
+  #start p {
     font-size: 20px; }
     @media (max-width: 374px) {
-      #page1 p:nth-of-type(n+3) {
+      #start p:nth-of-type(n+3) {
         display: none; } }
   @media (max-width: 575px) {
-    #page1 .subheadline {
+    #start .subheadline {
       text-align: center; } }
   @media (max-width: 575px) {
-    #page1 .headline {
+    #start .headline {
       display: inline-block;
       text-align: left; } }
-  #page1 .icon {
+  #start .icon {
     position: absolute;
     bottom: 40px;
     left: 50%;
@@ -310,12 +310,12 @@ p.social a.email {
     border: solid 2px #fff;
     border-radius: 20px;
     z-index: 3; }
-  #page1 .mirror {
+  #start .mirror {
     display: block;
     transform: scaleX(-1);
     direction: rtl;
     margin-left: 1.7em; }
-  #page1 .thin {
+  #start .thin {
     display: block;
     margin-top: -.1em;
     font-weight: 300;
