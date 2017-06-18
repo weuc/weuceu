@@ -2,25 +2,9 @@ $(function () {
 
     onepage();
     utils();
-    demo();
+    contact();
 
 });
-
-/* for demo purpose only - can be deleted */
-
-function demo() {
-
-    $("#page").change(function () {
-
-        if ($(this).val() !== '') {
-
-            window.location.href = $(this).val();
-
-        }
-
-        return false;
-    });
-}
 
 function onepage() {
 
@@ -30,7 +14,7 @@ function onepage() {
         // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
         animationTime: 1000, // AnimationTime let you define how long each section takes to animate
         pagination: true, // You can either show or hide the pagination. Toggle true for show, false for hide.
-        updateURL: false, // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+        updateURL: true, // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
         beforeMove: function (index) {
         }, // This option accepts a callback function. The function will be called before the page moves.
         afterMove: function (index) {
@@ -170,3 +154,38 @@ $(window).resize(function () {
     }
 
 });
+
+function contact(){
+    // $(".main").moveTo(8);
+    var $form = $('#contact-form'),
+        $mlayer = $('#mlayer');
+        $close = $('#mlayerClose');
+        $wrapper = $('#mlayerWrapper');
+
+    $form.submit(function(){
+        var $this = $(this);
+        event.preventDefault();
+
+        var posting = $.post( $form.attr('action'), $form.serialize() );
+
+        posting.done(function( data ) {
+            var content = $( data ).find( "#content" );
+            // $( "#result" ).empty().append( content );
+            console.log(data);
+            $('#mlayerContent').html(data);
+            $mlayer.show();
+        });
+
+    });
+
+    $wrapper.click(function(e){
+        e.stopPropagation();
+        if(e.target === e.currentTarget) {
+            $mlayer.hide();
+        }
+    });
+    $close.click(function(e){
+        e.stopPropagation();
+        $mlayer.hide();
+    });
+}

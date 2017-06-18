@@ -4,15 +4,16 @@
   }
 }
 
-.sectionDefinition {
+.section-unconference {
   &__secondary-content {
+    margin-top: 2em;
     @include media-breakpoint-up(md) {
       column-count: 2;
       column-gap: 3em;
     }
   }
 }
-.sectionDefinition-mood {
+.section-unconference-mood {
   > img {
     @media (max-height: 768px) {
       max-width: 250px;
@@ -33,6 +34,14 @@
   &__second-row {
     @include media-breakpoint-up(md) {
       margin-top: 3em;
+    }
+  }
+}
+
+.section-contact {
+  &__social {
+    @include media-breakpoint-up(lg) {
+      padding-top: 2em;
     }
   }
 }
