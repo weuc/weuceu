@@ -16,8 +16,8 @@ if(isset($_POST)) {
 		if(is_array($value)) {
 			// "Feldname:" und Zeilenumbruch dem Mailtext hinzufügen
 			$mailText .= $name . ":\n";
-			foreach($valueArray as $entry) {
-				$mailText .= "   " . $value . "\n";
+			foreach($value as $entry) {
+				$mailText .= "   " . $entry . "\n";
 			}
 		}
 		// Wenn der Feldwert ein einzelner Feldwert ist:
@@ -31,7 +31,7 @@ if(isset($_POST)) {
 // Wenn PHP "Magic Quotes" vor Apostrophzeichen einfügt:
 if(get_magic_quotes_gpc()) {
 	// eventuell eingefügte Backslashes entfernen
-	$mailtext = stripslashes($mailtext);
+	$mailtext = stripslashes($mailText);
 }
 
 // ======= Mailversand
