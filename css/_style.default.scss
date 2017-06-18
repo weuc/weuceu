@@ -6,6 +6,10 @@ html {
 }
 body {
   height: 100%;
+
+  /* ios smooth scrolling */
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
 }
 .wrapper {
   height: 100% !important;
