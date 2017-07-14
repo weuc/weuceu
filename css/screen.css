@@ -1213,6 +1213,9 @@ a.list-group-item.active > .badge,
     font-size: 2em;
     line-height: 1;
     background-color: #FFF; }
+    @media (max-width: 767px) {
+      .coclayer__close {
+        right: 0; } }
     .coclayer__close:focus {
       outline: none;
       font-weight: bold; }

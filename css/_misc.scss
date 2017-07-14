@@ -157,6 +157,11 @@
     font-size: 2em;
     line-height: 1;
     background-color: #FFF;
+
+    @include media-breakpoint-down(sm) {
+      right: 0;
+    }
+
     //color: $primary-color;
     &:focus {
       outline: none;
