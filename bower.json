@@ -17,5 +17,8 @@
   ],
   "devDependencies": {
     "bootstrap": "v4.0.0-alpha.6"
+  },
+  "dependencies": {
+    "animate.css": "^3.5.2"
   }
 }
