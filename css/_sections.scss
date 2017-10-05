@@ -1,3 +1,9 @@
+.start a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: dashed;
+}
+
 .section2-mood {
   @include media-breakpoint-up(md) {
     margin-top: 9em;
@@ -13,6 +19,7 @@
     }
   }
 }
+
 .section-unconference-mood {
   > img {
     @media (max-height: 768px) {
