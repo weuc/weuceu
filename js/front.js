@@ -3,7 +3,17 @@ $(function () {
     onepage();
     utils();
     contact();
+    codeOfConduct();
+});
 
+$.fn.extend({
+    animateCss: function (animationName) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        this.addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+        });
+        return this;
+    }
 });
 
 function onepage() {
@@ -188,4 +198,50 @@ function contact(){
         e.stopPropagation();
         $mlayer.hide();
     });
+}
+
+function codeOfConduct(){
+
+    var
+        $layer = $('#cocLayer'),
+        $close = $('#cocClose'),
+        $dialog = $('#cocDialog'),
+        $wrapper = $('#cocWrapper'),
+        $links = $('.js-coc-open');
+
+    $links.on('click', function(e){
+        e.stopPropagation();
+        show();
+    });
+
+    $wrapper.click(function(e){
+        e.stopPropagation();
+        if(e.target === e.currentTarget) {
+            hide();
+        }
+    });
+    $close.click(function(e){
+        e.stopPropagation();
+        hide();
+    });
+
+    function show() {
+        $layer.show();
+        $('main').disable();
+        $dialog.animateCss('flipInX');
+    }
+
+    function hide() {
+
+        var animationName = 'hinge';
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+        $dialog.addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+            $('main').enable();
+            $layer.hide();
+        });
+
+
+    }
 }
