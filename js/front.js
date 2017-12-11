@@ -2,7 +2,6 @@ $(function () {
 
     onepage();
     utils();
-    contact();
     codeOfConduct();
 });
 
@@ -164,41 +163,6 @@ $(window).resize(function () {
     }
 
 });
-
-function contact(){
-    // $(".main").moveTo(8);
-    var $form = $('#contact-form'),
-        $mlayer = $('#mlayer');
-        $close = $('#mlayerClose');
-        $wrapper = $('#mlayerWrapper');
-
-    $form.submit(function(){
-        var $this = $(this);
-        event.preventDefault();
-
-        var posting = $.post( $form.attr('action'), $form.serialize() );
-
-        posting.done(function( data ) {
-            var content = $( data ).find( "#content" );
-            // $( "#result" ).empty().append( content );
-            console.log(data);
-            $('#mlayerContent').html(data);
-            $mlayer.show();
-        });
-
-    });
-
-    $wrapper.click(function(e){
-        e.stopPropagation();
-        if(e.target === e.currentTarget) {
-            $mlayer.hide();
-        }
-    });
-    $close.click(function(e){
-        e.stopPropagation();
-        $mlayer.hide();
-    });
-}
 
 function codeOfConduct(){
 

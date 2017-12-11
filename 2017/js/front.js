@@ -2,7 +2,6 @@ $(function () {
 
     onepage();
     utils();
-    contact();
     codeOfConduct();
 });
 
@@ -34,7 +33,7 @@ function onepage() {
         responsiveFallback: 1000, // You can fallback to normal page scroll by defining the width of the browser in which
         // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
         // the browser's width is less than 600, the fallback will kick in.
-        direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+        direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
     });
 
 }
@@ -164,41 +163,6 @@ $(window).resize(function () {
     }
 
 });
-
-function contact(){
-    // $(".main").moveTo(8);
-    var $form = $('#contact-form'),
-        $mlayer = $('#mlayer');
-        $close = $('#mlayerClose');
-        $wrapper = $('#mlayerWrapper');
-
-    $form.submit(function(){
-        var $this = $(this);
-        event.preventDefault();
-
-        var posting = $.post( $form.attr('action'), $form.serialize() );
-
-        posting.done(function( data ) {
-            var content = $( data ).find( "#content" );
-            // $( "#result" ).empty().append( content );
-            console.log(data);
-            $('#mlayerContent').html(data);
-            $mlayer.show();
-        });
-
-    });
-
-    $wrapper.click(function(e){
-        e.stopPropagation();
-        if(e.target === e.currentTarget) {
-            $mlayer.hide();
-        }
-    });
-    $close.click(function(e){
-        e.stopPropagation();
-        $mlayer.hide();
-    });
-}
 
 function codeOfConduct(){
 

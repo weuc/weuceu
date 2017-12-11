@@ -277,9 +277,9 @@ p.social a.email {
       @media (min-width: 375px) {
         #start h1:before {
           position: absolute;
-          top: .7em;
+          top: .5em;
           left: 0;
-          width: 3.3em; } }
+          width: 3.7em; } }
       @media (max-width: 374px) {
         #start h1:before {
           display: block;
@@ -1321,3 +1321,5 @@ a.list-group-item.active > .badge,
 @media (min-width: 992px) {
   .section-contact__social {
     padding-top: 2em; } }
+
+/*# sourceMappingURL=screen.css.map */

@@ -215,9 +215,9 @@ p.social a.email {
 
       @include media-breakpoint-up(xs) {
         position: absolute;
-        top: .7em;
+        top: .5em;
         left: 0;
-        width: 3.3em;
+        width: 3.7em;
       }
 
       @include media-breakpoint-down(tn) {
