@@ -229,3 +229,16 @@
 .rubberband {
   animation-name: rubberBand;
 }
+
+
+.list-sponsor {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 2rem;
+
+  &__item {}
+}
