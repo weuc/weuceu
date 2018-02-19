@@ -41,6 +41,10 @@
   &__sponsor {
     padding: 0 1rem;
     font-family: $font-family-sans-serif;
+    @include media-breakpoint-down(tn) {
+      padding: 0 .25rem;
+    }
+
     img {
       //width: 100px;
       height: auto;
@@ -48,11 +52,22 @@
         max-height: 50px;
         width: auto;
       }
+      @media (max-width: 450px) {
+        max-height: 30px;
+      }
     }
 
     &--intro {
       @include media-breakpoint-down(xs) {
         display: none;
+      }
+    }
+
+    &--shopware {
+      img {
+        @include media-breakpoint-down(sm) {
+          min-width: 100px;
+        }
       }
     }
   }
