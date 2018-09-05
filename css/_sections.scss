@@ -24,6 +24,7 @@
 
   &__sponsors {
     @include list-unstyled;
+    border-bottom: none;
     margin: 0;
     display: flex;
     align-items: center;
@@ -39,6 +40,9 @@
   }
 
   &__sponsor {
+    a {
+      border-bottom: none;
+    }
     padding: 0 1rem;
     font-family: $font-family-sans-serif;
     img {
