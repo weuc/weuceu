@@ -1,0 +1,244 @@
+.event-facts {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 2em;
+  padding: 0;
+  font-family: $font-family-sans-serif;
+
+  > * {
+    float: left;
+    margin: 0;
+    padding: .25em .5em;
+    list-style: none;
+
+  }
+  &__label {
+    clear: left;
+    width: 6em;
+    text-transform: uppercase;
+    border-right: 1px solid $primary-color;
+    font-weight: 600;
+    @include font-smoothing;
+  }
+
+  &__value {
+    font-size: 1em;
+    width: calc(100% - 6em);
+  }
+}
+
+.gmaps-iframe {
+  position: relative;
+  padding-bottom: 51.47%; /* ratio 680x350 */
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  background: #F9F9F9;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.list-check {
+  position: relative;
+  @include list-unstyled;
+  > li {
+    margin-left: 2em;
+
+    &:before {
+      content: "\f00c";
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      margin-top: -.1em;
+      font: normal normal normal 1.5em/1 FontAwesome;
+      text-rendering: auto;
+      @include font-smoothing;
+      color: $primary-color;
+    }
+  }
+}
+
+.column-nobreak {
+  page-break-inside: avoid;
+}
+
+.mlayer {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: transparentize($primary-color, .4);
+  }
+  &__close {
+    position: absolute;
+    top: 0.25em;
+    right: 0.5em;
+    padding: 0;
+    border: none;
+    background: none;
+    font-size: 2em;
+    line-height: 1;
+    //color: $primary-color;
+  }
+  &__dialog {
+    position: relative;
+    padding: 1em;
+    border: 1px solid #333;
+    background: #FFF;
+  }
+
+  &__lead {
+    margin: 1em 0;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: $font-family-sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    &:after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 1px;
+      margin: .5em auto;
+      background: $primary-color;
+    }
+  }
+}
+
+.coclayer {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  &__close {
+    position: absolute;
+    top: 0;
+    right: -4rem;
+    width: 4rem;
+    padding: 1rem;
+    border: none;
+    background: none;
+    font-size: 2em;
+    line-height: 1;
+    background-color: #FFF;
+
+    @include media-breakpoint-down(sm) {
+      right: 0;
+    }
+
+    //color: $primary-color;
+    &:focus {
+      outline: none;
+      font-weight: bold;
+    }
+  }
+  &__dialog {
+    position: relative;
+    width: 640px;
+    max-width: 100%;
+    height: 500px;
+    max-height: 100%;
+    padding: 1em;
+    border: 1px solid #333;
+    background: #FFF;
+  }
+
+  &__content {
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  &__lead {
+    margin: 1em 0;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: $font-family-sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    &:after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 1px;
+      margin: .5em auto;
+      background: $primary-color;
+    }
+  }
+}
+
+
+
+@keyframes rubberBand {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+
+  40% {
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+
+  60% {
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.rubberband {
+  animation-name: rubberBand;
+}
+
+
+.list-sponsor {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 2rem;
+
+  &__item {}
+}
